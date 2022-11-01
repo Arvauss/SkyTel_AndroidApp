@@ -59,4 +59,14 @@
         android:layout_marginTop="125dp"
         android:layout_marginLeft="10dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardviewfrontcov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="160dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/frontcover_cardview" />
+
 </RelativeLayout>
