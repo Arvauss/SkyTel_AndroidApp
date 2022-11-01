@@ -3,22 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/blackblocks.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/blackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/blueaboutusbackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/bluebackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/edit_boxes_shape_message_system.xml" value="0.152" />
         <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/frontcoverbackground.xml" value="0.14" />
         <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/frontcovercardviewbackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/message_system_background.xml" value="0.14" />
         <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/yellowbackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/drawable/yellowcontactusbackground.xml" value="0.14" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/activity_about_us.xml" value="0.25" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/activity_contact_us.xml" value="0.25" />
         <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/activity_message_system.xml" value="0.25" />
-        <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/activity_yello_page_display.xml" value="0.25" />
         <entry key="..\:/Users/chloe/Documents/Code/AStudio/XBCAD_MobileAPP/app/src/main/res/layout/frontcover_cardview.xml" value="0.264" />
+        <entry key="..\:/Users/mfezi/OneDrive/Documents/School/Semester 2/Open Source Coding/SkyTel_MobileApp/app/src/main/res/layout/activity_message_system.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/mfezi/OneDrive/Documents/School/Semester 2/Open Source Coding/SkyTel_MobileApp/app/src/main/res/layout/activity_yello_page_display.xml" value="0.30052083333333335" />
       </map>
     </option>
   </component>
