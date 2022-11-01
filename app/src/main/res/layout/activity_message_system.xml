@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/message_system_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageSystem">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:shadowColor="#FFCB00"
+        android:shadowDx="5"
+        android:shadowDy="0.5"
+        android:shadowRadius="20"
+        android:text="SKYTEL MOBILE"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frontcoverbuttonimage"
+        android:layout_marginTop="90dp">
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/labelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="NAME:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/editboxname"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/edit_boxes_shape_message_system" />
+
+    <TextView
+        android:id="@+id/labeldesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="PROBLEM DESCRIPTION/QUESTION:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/editboxdesc"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/edit_boxes_shape_message_system" />
+
+    <TextView
+        android:id="@+id/labeldetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="320dp"
+        android:text="CONTACT DETAILS:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editboxdetails"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/edit_boxes_shape_message_system" />
+
+    <TextView
+        android:id="@+id/labelother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="OTHER:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/editboxother"
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/edit_boxes_shape_message_system" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="@color/white"
+        android:padding="5dp"
+        android:shadowColor="#FFCB00"
+        android:shadowDx="5"
+        android:shadowDy="0.5"
+        android:shadowRadius="20"
+        android:text="SUBMIT"
+        android:textColor="#FFCB00"
+        android:textSize="30dp"></Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="600dp"
+        android:shadowColor="#FFCB00"
+        android:shadowDx="5"
+        android:shadowDy="0.5"
+        android:shadowRadius="20"
+        android:text="THE MESSAGING SYSTEM ALLOWS US TO REVIEW YOUR QUERY AND GET BACK TO YOU ASAP WITHOUT WAITING ON HOUR-LONG CALLS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
