@@ -22,6 +22,7 @@
         android:textStyle="bold" />
 
     <ImageButton
+        android:id="@+id/yellopagedirect2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="0dp"

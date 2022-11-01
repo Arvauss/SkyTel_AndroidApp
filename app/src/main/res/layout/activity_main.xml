@@ -18,11 +18,11 @@
         android:layout_marginLeft="190dp"/>
 
     <ImageButton
+        android:id="@+id/yellopagedirect1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/frontcoverbuttonimage"
-        android:layout_marginTop="40dp">
-    </ImageButton>
+        android:layout_marginTop="40dp"
+        android:background="@drawable/frontcoverbuttonimage"></ImageButton>
 
     <TextView
         android:layout_width="wrap_content"
