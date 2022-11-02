@@ -1,7 +1,7 @@
 package com.example.skytel_mobileapp.Models;
 
 public class Deal {
-
+    private String dealID;
     private String dealTitle;
     private String dealDesc;
     private String dealPermURL;
@@ -11,7 +11,8 @@ public class Deal {
 
     }
 
-    public Deal(String title, String desc, String permUrl, String addUrl){
+    public Deal(String dID, String title, String desc, String permUrl, String addUrl){
+        this.dealID = dID;
         this.dealTitle = title;
         this.dealDesc = desc;
         this.dealPermURL = permUrl;
@@ -48,5 +49,13 @@ public class Deal {
 
     public void setDealAddURL(String dealAddURL) {
         this.dealAddURL = dealAddURL;
+    }
+
+    public String getDealID() {
+        return dealID;
+    }
+
+    public void setDealID(String dealID) {
+        this.dealID = dealID;
     }
 }
