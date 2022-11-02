@@ -4,16 +4,18 @@ public class Deal {
 
     private String dealTitle;
     private String dealDesc;
-    private String dealImgURL;
+    private String dealPermURL;
+    private String dealAddURL;
 
     public Deal(){
 
     }
 
-    public Deal(String title, String desc, String imgUrl){
+    public Deal(String title, String desc, String permUrl, String addUrl){
         this.dealTitle = title;
         this.dealDesc = desc;
-        this.dealImgURL = imgUrl;
+        this.dealPermURL = permUrl;
+        this.dealAddURL = addUrl;
     }
 
     public String getDealTitle() {
@@ -32,11 +34,19 @@ public class Deal {
         this.dealDesc = dealDesc;
     }
 
-    public String getDealImgURL() {
-        return dealImgURL;
+    public String getDealPermURL() {
+        return dealPermURL;
     }
 
-    public void setDealImgURL(String dealImgURL) {
-        this.dealImgURL = dealImgURL;
+    public void setDealPermURL(String dealPermURL) {
+        this.dealPermURL = dealPermURL;
+    }
+
+    public String getDealAddURL() {
+        return dealAddURL;
+    }
+
+    public void setDealAddURL(String dealAddURL) {
+        this.dealAddURL = dealAddURL;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.skytel_mobileapp.Adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skytel_mobileapp.Models.Deal;
 import com.example.skytel_mobileapp.R;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -28,17 +30,27 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
     @NonNull
     @Override
     public DealAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.frontcover_cardview, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DealAdapter.ViewHolder holder, int position) {
+        Deal deal = dealArrList.get(position);
+        holder.cardTitle.setText(deal.getDealTitle());
+        holder.cardDesc.setText(deal.getDealDesc());
 
+        if (deal.getDealPermURL() != null){
+            Picasso.get().load(deal.getDealPermURL()).resize(150 , 120).centerCrop().into(holder.cardPerm);
+        }
+        if (deal.getDealAddURL() != null){
+            Picasso.get().load(deal.getDealAddURL()).resize(200, 80).centerCrop().into(holder.cardAdd);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dealArrList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
