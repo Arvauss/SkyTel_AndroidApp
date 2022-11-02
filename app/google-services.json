@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "878114648289",
+    "firebase_url": "https://skytell-fbdb-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "skytell-fbdb",
+    "storage_bucket": "skytell-fbdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878114648289:android:1b515f5c4d13f00b1947a0",
+        "android_client_info": {
+          "package_name": "com.example.skytel_mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878114648289-u3f8kn6m8rkm4hie7cg50adg0hqvf7af.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOjytQbIE9teFfwbRvhDgNlODjep8vI2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878114648289-u3f8kn6m8rkm4hie7cg50adg0hqvf7af.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
