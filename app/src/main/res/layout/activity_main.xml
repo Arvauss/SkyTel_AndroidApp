@@ -7,38 +7,33 @@
     android:background="@drawable/frontcoverbackground"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="For More Look At The Yello Pages!"
-        android:textSize="14dp"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="190dp"/>
 
     <ImageButton
         android:id="@+id/yellopagedirect1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/frontcoverbuttonimage"></ImageButton>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKYTEL MOBILE"
-        android:textSize="28dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="85dp"
-        android:layout_marginLeft="100dp"/>
+        android:text="SKYTEL MOBILE"
+        android:shadowColor="#FFCB00"
+        android:shadowDx="5"
+        android:shadowDy="0.5"
+        android:shadowRadius="20"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="95dp"
         android:layout_height="30dp"
         android:layout_marginTop="90dp"
-        android:background="@drawable/yellowbackground">
+        android:background="@drawable/blueaboutusbackground">
 
     </ImageView>
 
@@ -47,17 +42,21 @@
         android:layout_height="30dp"
         android:layout_marginTop="90dp"
         android:layout_marginLeft="320dp"
-        android:background="@drawable/yellowbackground"/>
+        android:background="@drawable/blueaboutusbackground"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MONTHLY DEALS! DON'T MISS OUT"
-        android:textSize="25dp"
-        android:textColor="@color/white"
-        android:textStyle="italic"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="125dp"
-        android:layout_marginLeft="10dp"/>
+        android:shadowColor="#FFCB00"
+        android:shadowDx="5"
+        android:shadowDy="0.5"
+        android:shadowRadius="20"
+        android:text="MONTHLY DEALS! DON'T MISS OUT"
+        android:textColor="#009DEA"
+        android:textSize="25dp"
+        android:textStyle="italic" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardviewfrontcov"
