@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/faqpic"
+    android:background="@drawable/faqemppic"
     tools:context=".FAQ">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="170dp"
         android:layout_marginTop="20dp"
-        android:shadowColor="#FFCB00"
+        android:shadowColor="@color/SkyTelBlue"
         android:shadowDx="5"
         android:shadowDy="0.5"
         android:shadowRadius="20"
@@ -42,7 +42,7 @@
         android:layout_height="35dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
-        android:background="@drawable/blackblocks"
+        android:background="@drawable/blueaboutusbackground"
         android:padding="18dp"
         android:textColor="#FFCB00"
         android:textSize="15dp" />
@@ -66,9 +66,9 @@
         android:id="@+id/upgradeInfoanswer"
         android:layout_width="344dp"
         android:layout_height="35dp"
-        android:layout_marginTop="215dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/blackblocks"
+        android:layout_marginTop="215dp"
+        android:background="@drawable/blueaboutusbackground"
         android:padding="18dp"
         android:textColor="#FFCB00"
         android:textSize="15dp" />
@@ -92,7 +92,7 @@
         android:layout_height="35dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="315dp"
-        android:background="@drawable/blackblocks"
+        android:background="@drawable/blueaboutusbackground"
         android:padding="18dp"
         android:textColor="#FFCB00"
         android:textSize="15dp" />
@@ -114,9 +114,9 @@
         android:id="@+id/rechargeAccountanswer"
         android:layout_width="344dp"
         android:layout_height="35dp"
-        android:layout_marginTop="415dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/blackblocks"
+        android:layout_marginTop="415dp"
+        android:background="@drawable/blueaboutusbackground"
         android:padding="18dp"
         android:textColor="#FFCB00"
         android:textSize="15dp" />
@@ -138,9 +138,9 @@
         android:id="@+id/generalSupportanswer"
         android:layout_width="344dp"
         android:layout_height="35dp"
-        android:layout_marginTop="515dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/blackblocks"
+        android:layout_marginTop="515dp"
+        android:background="@drawable/blueaboutusbackground"
         android:padding="18dp"
         android:textColor="#FFCB00"
         android:textSize="15dp" />

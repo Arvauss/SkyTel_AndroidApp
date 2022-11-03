@@ -10,21 +10,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="120dp"
         android:shadowColor="#FFCB00"
         android:shadowDx="5"
         android:shadowDy="0.5"
         android:shadowRadius="20"
-        android:text="SKYTEL MOBILE - MESSAGE SYSTEM"
+        android:text="LOG A QUERY"
         android:textColor="@color/white"
-        android:textSize="23dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/yellopagedirect2"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/frontcoverbuttonimage"></ImageButton>
 
