@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyTel_MobileApp"
         tools:targetApi="31">
+  <!--      <activity
+            android:name=".FAQ"
+            android:exported="false" />-->
         <activity
             android:name=".ContactUs"
             android:exported="false" />
@@ -26,7 +29,7 @@
             android:name=".MessageSystem"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FAQ"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
