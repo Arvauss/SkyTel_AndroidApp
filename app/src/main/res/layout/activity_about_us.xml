@@ -60,12 +60,13 @@
     </ImageView>
 
     //this is the view where image 1 will be displayed using the id
-    <ImageView
+
+    <TextView
         android:id="@+id/aboutuspic1"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="390dp"/>
+        android:layout_marginTop="390dp" />
 
     //background image view for image 2
     <ImageView
@@ -77,12 +78,12 @@
     </ImageView>
 
     //this is the view where image 2 will be displayed using the id
-    <ImageView
+    <TextView
         android:id="@+id/aboutuspic2"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="390dp"
         android:layout_marginLeft="240dp">
-    </ImageView>
+    </TextView>
 
 </RelativeLayout>

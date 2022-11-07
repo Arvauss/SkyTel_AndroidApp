@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         dbRef = FirebaseDatabase.getInstance().getReference();
 
 
+
+
         InitDeals();
     }
 

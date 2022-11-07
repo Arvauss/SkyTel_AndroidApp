@@ -1,6 +1,8 @@
 package com.example.skytel_mobileapp.Adapters;
 
 import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +43,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
         holder.cardDesc.setText(deal.getDealDesc());
 
         if (deal.getDealPermURL() != null){
-            Picasso.get().load(deal.getDealPermURL()).resize(150 , 120).centerCrop().into(holder.cardPerm);
-        }
+            Picasso.get().load(deal.getDealPermURL()).resize(150 , 120).centerCrop().into(holder.cardPerm);}
         if (deal.getDealAddURL() != null){
             Picasso.get().load(deal.getDealAddURL()).resize(200, 80).centerCrop().into(holder.cardAdd);
         }
@@ -61,8 +62,8 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            cardPerm = itemView.findViewById(R.id.ImagePerm);
-            cardAdd = itemView.findViewById(R.id.ImageAdd);
+            cardPerm = (ImageView) itemView.findViewById(R.id.ImagePerm);
+            cardAdd = (ImageView) itemView.findViewById(R.id.ImageAdd);
             cardTitle = itemView.findViewById(R.id.frontcovtitle);
             cardDesc = itemView.findViewById(R.id.frontcovdesc);
         }
