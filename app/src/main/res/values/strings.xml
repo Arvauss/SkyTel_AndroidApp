@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">SkyTel_MobileApp</string>
+    <string name="app_name">SkyTel Mobile</string>
     <string name="LEGAL">LEGAL</string>
     <string name="PRIVACY_POLICY">PRIVACY POLICY</string>
     <string name="TC">Ts AND Cs</string>
+
+    <string name="techsupport">TECHNICAL SUPPORT</string>
+
+    //drop-down menu options (Envato Tuts+, 2022) and (Android Drop Down List Tutorial, 2016).
+    <string-array name="Colours" size="15">
+        <item>Green</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Yellow</item>
+    </string-array>
 </resources>
