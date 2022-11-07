@@ -20,6 +20,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+// RecyclerView Adapter configuration (GeeksForGeeks, 2022) https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
 public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
     private final Context context;
     private final ArrayList<Deal> dealArrList;

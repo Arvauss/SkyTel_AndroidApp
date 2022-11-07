@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void InitRecycler(){
+        //RecyclerView usage (GeeksForGeeks, 2022) https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
         dealRV = findViewById(R.id.cardviewfrontcov);
         DealAdapter adap = new DealAdapter(this, arrDealList);
         LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
