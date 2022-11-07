@@ -43,9 +43,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="115dp"
         android:background="@drawable/blueaboutusbackground"
-        android:padding="18dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
         android:textColor="#FFCB00"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textAlignment="gravity"/>
 
     //added drop down box in view Code (Envato Tuts+, 2022) and (Android Drop Down List Tutorial, 2016).
 
@@ -69,9 +71,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="215dp"
         android:background="@drawable/blueaboutusbackground"
-        android:padding="18dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
         android:textColor="#FFCB00"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textAlignment="gravity"/>
 
     <Spinner
         android:id="@+id/databundles"
@@ -93,9 +97,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="315dp"
         android:background="@drawable/blueaboutusbackground"
-        android:padding="18dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
         android:textColor="#FFCB00"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textAlignment="gravity"/>
 
     <Spinner
         android:id="@+id/rechargeAccount"
@@ -117,9 +123,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="415dp"
         android:background="@drawable/blueaboutusbackground"
-        android:padding="18dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
         android:textColor="#FFCB00"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textAlignment="gravity"/>
 
     <Spinner
         android:id="@+id/generalSupport"
@@ -141,9 +149,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="515dp"
         android:background="@drawable/blueaboutusbackground"
-        android:padding="18dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
         android:textColor="#FFCB00"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:textAlignment="gravity"/>
 
 
 </RelativeLayout>
