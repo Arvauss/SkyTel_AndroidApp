@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/yellotrader_nav"
+            android:title="YELLO TRADER"/>
+
+        <item android:id="@+id/coveragemap_nav"
+                android:title="COVERAGE MAP"/>
+
+        <item android:id="@+id/specfications_nav"
+            android:title="MOBILE SPECIFICATIONS"/>
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="More Information">
+            <menu>
+                <item android:id="@+id/aboutus_nav"
+                    android:title="ABOUT US"/>
+
+                <item android:id="@+id/contactus_nav"
+                    android:title="CONTACT US"/>
+
+                <item android:id="@+id/faq_nav"
+                    android:title="FAQ"/>
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Messenger">
+        <menu>
+            <item android:id="@+id/querymessager_nav"
+                android:title="QUERY MESSENGER" />
+        </menu>
+    </item>
+
+
+</menu>
