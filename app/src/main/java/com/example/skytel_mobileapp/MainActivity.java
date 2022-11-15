@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toolbar;
@@ -15,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         // drawer layout instance to toggle the menu icon to open (The IIE, 2022)
         //drawer and back button to close drawer (geeksforgeeks.org, 2022).
         drawerLayout = findViewById(R.id.drawer_Layout);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
         //Instantiating burgerNavigationView and binding it to view (Pulak, 2017).
         navigationView = findViewById(R.id.nav_view);
@@ -55,16 +57,22 @@ public class MainActivity extends AppCompatActivity {
             Intent dashB = new Intent(this, YelloPageDisplay.class);
             startActivity(dashB);
         }
-/*        else if (id == R.id.coveragemap_nav) {
+        //code modified by How to Get link in navigation Drawer in android studio 2020 (2020)
+        //Link: https://www.youtube.com/watch?v=mMkUekK_wB8
+        else if (id == R.id.coveragemap_nav) {
             //Go to shopping list page (The IIE, 2022)
-            Intent shopList = new Intent(this, ShoppingList_Page.class);
+            Intent shopList = new Intent(Intent.ACTION_VIEW);
+            shopList.setData(Uri.parse("https://www.mtn.co.za/home/coverage/"));
             startActivity(shopList);
         }
+        //code modified by How to Get link in navigation Drawer in android studio 2020 (2020)
+        //Link: https://www.youtube.com/watch?v=mMkUekK_wB8
         else if (id == R.id.specfications_nav) {
             //Go to Graph page
-            Intent graphPage = new Intent(this, Graph_Page.class);
+            Intent graphPage = new Intent(Intent.ACTION_VIEW);
+            graphPage.setData(Uri.parse("https://www.gsmarena.com/"));
             startActivity(graphPage);
-        } */
+        }
         else if (id == R.id.aboutus_nav) {
             //Go to Graph page
             Intent graphPage = new Intent(this, AboutUs.class);
@@ -85,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
             Intent graphPage = new Intent(this, MessageSystem.class);
             startActivity(graphPage);
         }
-
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
