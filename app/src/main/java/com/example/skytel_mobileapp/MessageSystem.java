@@ -61,42 +61,48 @@ public class MessageSystem extends AppCompatActivity {
         //code modified by How to Get link in navigation Drawer in android studio 2020 (2020)
         //Link: https://www.youtube.com/watch?v=mMkUekK_wB8
         else if (id == R.id.coveragemap_nav) {
-            //Go to shopping list page (The IIE, 2022)
-            Intent shopList = new Intent(Intent.ACTION_VIEW);
-            shopList.setData(Uri.parse("https://www.mtn.co.za/home/coverage/"));
-            startActivity(shopList);
+            //Go to Coverage map (The IIE, 2022)
+            Intent CoverMap = new Intent(Intent.ACTION_VIEW);
+            CoverMap.setData(Uri.parse("https://www.mtn.co.za/home/coverage/"));
+            startActivity(CoverMap);
         }
         //code modified by How to Get link in navigation Drawer in android studio 2020 (2020)
         //Link: https://www.youtube.com/watch?v=mMkUekK_wB8
         else if (id == R.id.specfications_nav) {
-            //Go to Graph page
-            Intent graphPage = new Intent(Intent.ACTION_VIEW);
-            graphPage.setData(Uri.parse("https://www.gsmarena.com/"));
-            startActivity(graphPage);
+            //Go to specifications page
+            Intent Specs = new Intent(Intent.ACTION_VIEW);
+            Specs.setData(Uri.parse("https://www.gsmarena.com/"));
+            startActivity(Specs);
         }
         else if (id == R.id.aboutus_nav) {
-            //Go to Graph page
-            Intent graphPage = new Intent(this, AboutUs.class);
-            startActivity(graphPage);
+            //Go to AboutUs page
+            Intent about = new Intent(this, AboutUs.class);
+            startActivity(about);
         }
         else if (id == R.id.contactus_nav) {
-            //Go to Graph page
-            Intent graphPage = new Intent(this, ContactUs.class);
-            startActivity(graphPage);
+            //Go to ContactUs page
+            Intent contact = new Intent(this, ContactUs.class);
+            startActivity(contact);
         }
         else if (id == R.id.faq_nav) {
-            //Go to Graph page
-            Intent graphPage = new Intent(this, FAQ.class);
-            startActivity(graphPage);
+            //Go to FAQ page
+            Intent faq = new Intent(this, FAQ.class);
+            startActivity(faq);
         }
         else if (id == R.id.querymessager_nav) {
-            //Go to Graph page
-            Intent graphPage = new Intent(this, MessageSystem.class);
-            startActivity(graphPage);
+            //Go to messages page
+            Intent msg = new Intent(this, MessageSystem.class);
+            startActivity(msg);
         }
-
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (actionBarDrawerToggle.onOptionsItemSelected(item))
+            return true;
+        return super.onOptionsItemSelected(item);
     }
 }
