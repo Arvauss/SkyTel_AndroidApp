@@ -15,12 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyTel_MobileApp"
         tools:targetApi="31">
+
+
         <activity
             android:name=".FAQ"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ContactUs"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".YelloPageDisplay"
             android:exported="false" />

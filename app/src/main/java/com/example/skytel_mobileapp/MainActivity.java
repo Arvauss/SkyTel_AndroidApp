@@ -2,9 +2,12 @@ package com.example.skytel_mobileapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +17,21 @@ import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
+import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.example.skytel_mobileapp.Adapters.DealAdapter;
+import com.example.skytel_mobileapp.Models.Deal;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     public NavigationView navigationView;
     Toolbar toolbar;
+
+    private ArrayList<Deal> arrDealList = new ArrayList<Deal>();
+    RecyclerView dealRV;
+    private DatabaseReference dbRef;
+    private FirebaseStorage fbStorage;
+    private StorageReference storRef;
+ //   private FirebaseAuth Auth;
+   // private FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +73,42 @@ public class MainActivity extends AppCompatActivity {
         // to make the Navigation drawer icon always appear on the action bar (geeksforgeeks.org, 2022).
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        dbRef = FirebaseDatabase.getInstance().getReference();
+        InitDeals();
+    }
+
+    //Temp... TODO: adjust to read from database
+    public void InitDeals(){
+
+        DatabaseReference dealsRef = dbRef.child("Deals");
+
+        dealsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                arrDealList.clear();
+                for (DataSnapshot snap: snapshot.getChildren()) {
+                    Deal d = snap.getValue(Deal.class);
+                    arrDealList.add(d);
+                }
+                InitRecycler();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    public void InitRecycler(){
+        //RecyclerView usage (GeeksForGeeks, 2022) https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
+        dealRV = findViewById(R.id.cardviewfrontcov);
+        DealAdapter adap = new DealAdapter(this, arrDealList);
+        LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+
+        dealRV.setAdapter(adap);
+        dealRV.setLayoutManager(llm);
     }
 
     //Method to handle the OnCLicked events within the burger menu (Pulak, 2017)
