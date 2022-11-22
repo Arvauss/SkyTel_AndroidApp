@@ -77,6 +77,8 @@ public class ContactUs extends AppCompatActivity {
         // to make the Navigation drawer icon always appear on the action bar (geeksforgeeks.org, 2022).
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        InitUI();
+
     }
 
     //Method to handle the OnCLicked events within the burger menu (Pulak, 2017)
@@ -135,7 +137,7 @@ public class ContactUs extends AppCompatActivity {
         if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
         return super.onOptionsItemSelected(item);
-        InitUI();
+
 
     }
 
