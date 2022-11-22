@@ -40,14 +40,9 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull DealAdapter.ViewHolder holder, int position) {
         Deal deal = dealArrList.get(position);
-        holder.cardTitle.setText(deal.getDealTitle());
-        holder.cardDesc.setText(deal.getDealDesc());
+        holder.cardTitle.setText(deal.getTitle());
+        holder.cardDesc.setText(deal.getDescription());
 
-        if (deal.getDealPermURL() != null){
-            Picasso.get().load(deal.getDealPermURL()).resize(150 , 120).centerCrop().into(holder.cardPerm);}
-        if (deal.getDealAddURL() != null){
-            Picasso.get().load(deal.getDealAddURL()).resize(200, 80).centerCrop().into(holder.cardAdd);
-        }
     }
 
     @Override
@@ -56,15 +51,12 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final ImageView cardPerm;
-        private final ImageView cardAdd;
         private final TextView cardTitle;
         private final TextView cardDesc;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            cardPerm = (ImageView) itemView.findViewById(R.id.ImagePerm);
-            cardAdd = (ImageView) itemView.findViewById(R.id.ImageAdd);
+
             cardTitle = itemView.findViewById(R.id.frontcovtitle);
             cardDesc = itemView.findViewById(R.id.frontcovdesc);
         }

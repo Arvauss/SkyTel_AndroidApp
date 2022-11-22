@@ -17,13 +17,13 @@
             android:background="@drawable/frontcovercardviewbackground"
             android:gravity="center">
 
-            <ImageView
+         <!--   <ImageView
                 android:id="@+id/ImagePerm"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="50dp"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@mipmap/ic_launcher"/>-->
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -38,6 +38,7 @@
                         android:text="TITLE"
                         android:textStyle="bold"
                         android:textSize="30dp"
+                        android:layout_marginHorizontal="15dp"
                         android:layout_marginTop="10dp"/>
             </LinearLayout>
 
@@ -54,10 +55,11 @@
                     android:textStyle="italic"
                     android:text="DESCRIPTION"
                     android:textSize="14dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"/>
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -69,7 +71,7 @@
                     android:layout_width="200dp"
                     android:layout_height="80dp"
                     android:src="@mipmap/ic_launcher"/>
-            </LinearLayout>
+            </LinearLayout>-->
 
         </LinearLayout>
 

@@ -77,10 +77,9 @@ public class MainActivity extends AppCompatActivity {
         InitDeals();
     }
 
-    //Temp... TODO: adjust to read from database
     public void InitDeals(){
 
-        DatabaseReference dealsRef = dbRef.child("Deals");
+        DatabaseReference dealsRef = dbRef.child("WebDeals");
 
         dealsRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -88,8 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 arrDealList.clear();
                 for (DataSnapshot snap: snapshot.getChildren()) {
                     Deal d = snap.getValue(Deal.class);
-                    arrDealList.add(d);
-                }
+                    arrDealList.add(d);}
                 InitRecycler();
             }
 

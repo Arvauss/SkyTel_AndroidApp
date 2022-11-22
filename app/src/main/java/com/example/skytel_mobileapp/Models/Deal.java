@@ -1,41 +1,27 @@
 package com.example.skytel_mobileapp.Models;
 
 public class Deal {
-    private String dealID;
-    private String dealTitle;
-    private String dealDesc;
-    private String dealPermURL;
-    private String dealAddURL;
+    private String id;
+    private String Title;
+    private String Description;
+/*    private String dealPermURL;
+    private String dealAddURL;*/
 
     public Deal(){
 
     }
 
     public Deal(String dID, String title, String desc, String permUrl, String addUrl){
-        this.dealID = dID;
-        this.dealTitle = title;
-        this.dealDesc = desc;
-        this.dealPermURL = permUrl;
-        this.dealAddURL = addUrl;
+        this.id = dID;
+        this.Title = title;
+        this.Description = desc;
+        /*this.dealPermURL = permUrl;
+        this.dealAddURL = addUrl;*/
     }
 
-    public String getDealTitle() {
-        return dealTitle;
-    }
 
-    public void setDealTitle(String dealTitle) {
-        this.dealTitle = dealTitle;
-    }
 
-    public String getDealDesc() {
-        return dealDesc;
-    }
-
-    public void setDealDesc(String dealDesc) {
-        this.dealDesc = dealDesc;
-    }
-
-    public String getDealPermURL() {
+/*    public String getDealPermURL() {
         return dealPermURL;
     }
 
@@ -49,13 +35,29 @@ public class Deal {
 
     public void setDealAddURL(String dealAddURL) {
         this.dealAddURL = dealAddURL;
+    }*/
+
+    public String getId() {
+        return id;
     }
 
-    public String getDealID() {
-        return dealID;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setDealID(String dealID) {
-        this.dealID = dealID;
+    public String getTitle() {
+        return Title;
+    }
+
+    public void setTitle(String title) {
+        Title = title;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 }
