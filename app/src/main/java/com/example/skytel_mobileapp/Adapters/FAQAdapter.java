@@ -21,6 +21,7 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.ViewHolder> {
     public FAQAdapter(Context context, ArrayList<FAQModel> faqArrList){
         this.context = context;
         this.faqArrList = faqArrList;
+
     }
 
     @NonNull
