@@ -10,9 +10,18 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.example.skytel_mobileapp.Models.CustomerQuery;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MessageSystem extends AppCompatActivity {
 
@@ -20,11 +29,51 @@ public class MessageSystem extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    EditText cName, cProblem, cDetails, cOther;
+    Button submit;
+    CustomerQuery cq;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_system);
+
+        cName = findViewById(R.id.editboxname);
+        cProblem = findViewById(R.id.editboxdesc);
+        cDetails = findViewById(R.id.editboxdetails);
+        cOther = findViewById(R.id.editboxother);
+        submit = findViewById(R.id.submitBtn);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String name = cName.getText().toString();
+                String problem = cProblem.getText().toString();
+                String details = cDetails.getText().toString();
+                String other = cOther.getText().toString();
+
+                cq = new CustomerQuery(name, problem, details, other);
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference();
+                String key = myRef.push().getKey();
+
+                myRef.child("WebMessages").child(key).setValue(cq);
+
+                myRef.child("WebMessages").child(key).child("Id").setValue(key).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                    }
+                });
+
+                Toast.makeText(getApplicationContext(), "Query Sent.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         //navigation bar setup
 

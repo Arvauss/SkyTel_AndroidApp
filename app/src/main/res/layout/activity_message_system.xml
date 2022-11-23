@@ -53,13 +53,13 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editboxname"
-        android:layout_width="350dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="210dp"
-        android:background="@drawable/edit_boxes_shape_message_system" />
+        <EditText
+            android:id="@+id/editboxname"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="210dp"
+            android:background="@drawable/edit_boxes_shape_message_system" />
 
     <TextView
         android:id="@+id/labeldesc"
@@ -121,19 +121,20 @@
         android:layout_marginTop="450dp"
         android:background="@drawable/edit_boxes_shape_message_system" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
-        android:backgroundTint="@color/white"
-        android:padding="5dp"
-        android:shadowColor="#FFCB00"
-        android:shadowDx="5"
-        android:shadowDy="0.5"
-        android:shadowRadius="20"
-        android:text="SUBMIT"
-        android:textColor="#FFCB00"
-        android:textSize="30dp"></Button>
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:backgroundTint="@color/white"
+            android:padding="5dp"
+            android:shadowColor="#FFCB00"
+            android:shadowDx="5"
+            android:shadowDy="0.5"
+            android:shadowRadius="20"
+            android:text="SUBMIT"
+            android:textColor="#FFCB00"
+            android:textSize="30dp"></Button>
 
     <TextView
         android:layout_width="match_parent"
