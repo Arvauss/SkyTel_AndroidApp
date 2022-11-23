@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="6dp"
+    android:layout_marginVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/faq_listitem_q_background"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:id="@+id/faq_listitem_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/faq_listitem_a_background"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/faq_listitem_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+</LinearLayout>
