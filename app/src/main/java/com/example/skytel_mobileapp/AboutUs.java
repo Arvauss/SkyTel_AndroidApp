@@ -9,10 +9,25 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.MediaController;
 import android.widget.Toolbar;
+import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.File;
 
 public class AboutUs extends AppCompatActivity {
 
@@ -20,6 +35,11 @@ public class AboutUs extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    DatabaseReference dbRef;
+    StorageReference storRef;
+
+
+    String vidUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +64,44 @@ public class AboutUs extends AppCompatActivity {
 
         // to make the Navigation drawer icon always appear on the action bar (geeksforgeeks.org, 2022).
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        dbRef = FirebaseDatabase.getInstance().getReference();
+
+        dbRef.child("Media").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    vidUrl = snap.getValue(String.class);
+                    Log.d("123456", "onDataChange: " + vidUrl);
+                }
+
+                VideoView vidView = findViewById(R.id.video);
+
+                Uri vidUri = Uri.parse(vidUrl);
+
+                vidView.setVideoURI(vidUri);
+
+                MediaController medC = new MediaController(getApplicationContext());
+
+                medC.setAnchorView(vidView);
+
+                medC.setMediaPlayer(vidView);
+
+                vidView.setMediaController(medC);
+
+                vidView.start();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
 
     }
 

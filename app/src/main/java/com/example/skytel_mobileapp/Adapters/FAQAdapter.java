@@ -37,6 +37,8 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.ViewHolder> {
 
         holder.faqQ.setText(faq.getQuestion());
         holder.faqA.setText(faq.getAnswer());
+        holder.faqA.getText();
+
     }
 
     @Override
