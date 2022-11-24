@@ -7,12 +7,15 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.Toolbar;
 import android.widget.VideoView;
 
@@ -26,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 
@@ -38,15 +42,25 @@ public class AboutUs extends AppCompatActivity {
     DatabaseReference dbRef;
     StorageReference storRef;
 
+    VideoView vidView;
+    MediaController medC;
+    ImageView img;
+    TextView tvAbout;
 
     String vidUrl;
+    String imgUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-// drawer layout instance to toggle the menu icon to open (The IIE, 2022)
+        vidView = findViewById(R.id.video);
+        medC = new MediaController(AboutUs.this);
+        img = findViewById(R.id.aboutusImg);
+        tvAbout = findViewById(R.id.aboutuspic2);
+
+        // drawer layout instance to toggle the menu icon to open (The IIE, 2022)
         //drawer and back button to close drawer (geeksforgeeks.org, 2022).
         drawerLayout = findViewById(R.id.drawer_Layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -66,31 +80,36 @@ public class AboutUs extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dbRef = FirebaseDatabase.getInstance().getReference();
+        storRef = FirebaseStorage.getInstance().getReference("Media/");
+
+        /*String path = getApplicationContext().getFilesDir().getAbsolutePath();
+        File file = new File(path + "/YelloTrader-NovB-2022.pdf");*/
+
+        /*UploadTask up = storRef.child("YelloTrader").putFile(Uri.fromFile(file));
+
+        storRef.child("YelloTrader").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                dbRef.child("Media").child("YelloTrader").setValue(uri.toString());
+            }
+        });*/
+
 
         dbRef.child("Media").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for(DataSnapshot snap : snapshot.getChildren()){
-                    vidUrl = snap.getValue(String.class);
+                    if (snap.getKey().equals("AboutUsVideo"))
+                        vidUrl = snap.getValue(String.class);
+
+                    if (snap.getKey().equals("AboutUsPic"))
+                        imgUrl = snap.getValue(String.class);
                     Log.d("123456", "onDataChange: " + vidUrl);
                 }
-
-                VideoView vidView = findViewById(R.id.video);
-
-                Uri vidUri = Uri.parse(vidUrl);
-
-                vidView.setVideoURI(vidUri);
-
-                MediaController medC = new MediaController(getApplicationContext());
-
-                medC.setAnchorView(vidView);
-
-                medC.setMediaPlayer(vidView);
-
-                vidView.setMediaController(medC);
-
-                vidView.start();
+                InitVideo();
+                Picasso.get().load(imgUrl).resize(110,110).into(img);
+                tvAbout.setText("SkyTel Mobile");
             }
 
             @Override
@@ -101,9 +120,33 @@ public class AboutUs extends AppCompatActivity {
 
 
 
-
-
     }
+
+    public void InitVideo(){
+        Uri vidUri = Uri.parse(vidUrl);
+
+        vidView.setVideoURI(vidUri);
+
+
+
+        medC.setAnchorView(vidView);
+
+        medC.setMediaPlayer(vidView);
+
+        vidView.setMediaController(medC);
+
+        vidView.start();
+
+
+        vidView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+                mediaPlayer.setVolume(0, 0);
+            }
+        });
+    }
+
 
     //Method to handle the OnCLicked events within the burger menu (Pulak, 2017)
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
