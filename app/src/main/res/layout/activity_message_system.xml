@@ -59,7 +59,8 @@
             android:layout_height="25dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="210dp"
-            android:background="@drawable/edit_boxes_shape_message_system" />
+            android:background="@drawable/edit_boxes_shape_message_system"
+            android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/labeldesc"
@@ -73,13 +74,14 @@
         android:layout_marginTop="260dp"
         android:layout_marginLeft="40dp"/>
 
-    <EditText
-        android:id="@+id/editboxdesc"
-        android:layout_width="350dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="290dp"
-        android:background="@drawable/edit_boxes_shape_message_system" />
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/editboxdesc"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="290dp"
+            android:background="@drawable/edit_boxes_shape_message_system" />
 
     <TextView
         android:id="@+id/labeldetails"
@@ -93,15 +95,16 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editboxdetails"
-        android:layout_width="350dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="370dp"
-        android:background="@drawable/edit_boxes_shape_message_system" />
+        <EditText
+            android:id="@+id/editboxdetails"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/edit_boxes_shape_message_system" />
 
     <TextView
+
         android:id="@+id/labelother"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,13 +116,14 @@
         android:layout_marginTop="420dp"
         android:layout_marginLeft="40dp"/>
 
-    <EditText
-        android:id="@+id/editboxother"
-        android:layout_width="350dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="450dp"
-        android:background="@drawable/edit_boxes_shape_message_system" />
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/editboxother"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="450dp"
+            android:background="@drawable/edit_boxes_shape_message_system" />
 
         <Button
             android:id="@+id/submitBtn"
