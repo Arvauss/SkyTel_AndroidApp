@@ -154,12 +154,12 @@ public class ContactUs extends AppCompatActivity {
                 for (DataSnapshot snap: snapshot.getChildren()) {
                     cmList.add(snap.getValue(ContactUsModel.class));
                 }
-                if (cmList.size() == 4){
-                    tv1.setText("Contact: " + cmList.get(0).getTitle() + "\nContact Number: " + cmList.get(0).getContactNum());
-                    tv2.setText("Contact: " + cmList.get(1).getTitle() + "\nContact Number: " + cmList.get(1).getContactNum());
-                    tv3.setText("Contact: " + cmList.get(2).getTitle() + "\nContact Number: " + cmList.get(2).getContactNum());
-                    tv4.setText("Contact: " + cmList.get(3).getTitle() + "\nContact Number: " + cmList.get(3).getContactNum());
-                }
+
+                    tv1.setText("Location: " + cmList.get(0).getLocation() + "\nContact Number: " + cmList.get(0).getNumber());
+                    tv2.setText("Location: " + cmList.get(1).getLocation() + "\nContact Number: " + cmList.get(1).getNumber());
+                    tv3.setText("Location: " + cmList.get(2).getLocation() + "\nContact Number: " + cmList.get(2).getNumber());
+                    tv4.setText("Location: " + cmList.get(3).getLocation() + "\nContact Number: " + cmList.get(3).getNumber());
+
 
             }
 

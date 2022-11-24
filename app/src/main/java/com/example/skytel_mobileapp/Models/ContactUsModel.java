@@ -1,29 +1,33 @@
 package com.example.skytel_mobileapp.Models;
 
 public class ContactUsModel {
-    private String Title;
-    private String ContactNum;
+    private String Location;
+    private String Number;
+    private String shop;
 
     public ContactUsModel(){};
 
-    public ContactUsModel(String title, String contactNum) {
-        Title = title;
-        ContactNum = contactNum;
+    public String getLocation() {
+        return Location;
     }
 
-    public String getTitle() {
-        return Title;
+    public void setLocation(String location) {
+        Location = location;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public String getNumber() {
+        return Number;
     }
 
-    public String getContactNum() {
-        return ContactNum;
+    public void setNumber(String number) {
+        Number = number;
     }
 
-    public void setContactNum(String contactNum) {
-        ContactNum = contactNum;
+    public String getShop() {
+        return shop;
+    }
+
+    public void setShop(String shop) {
+        this.shop = shop;
     }
 }

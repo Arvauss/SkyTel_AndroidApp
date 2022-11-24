@@ -9,10 +9,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class YelloPageDisplay extends AppCompatActivity {
 
@@ -20,6 +26,8 @@ public class YelloPageDisplay extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    String pdfUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,35 @@ public class YelloPageDisplay extends AppCompatActivity {
 
         // to make the Navigation drawer icon always appear on the action bar (geeksforgeeks.org, 2022).
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
+
+        dbRef.child("Media").child("YelloTrader").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                pdfUrl = snapshot.getValue(String.class);
+                openPDFViewer(pdfUrl);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+    }
+
+    public void openPDFViewer(String url){
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(Uri.parse(url), "application/pdf");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            startActivity(intent);
+        } catch (Exception e){
+            Log.d("123456", "openPDFViwer: " + e.getMessage());
+        }
     }
 
     //Method to handle the OnCLicked events within the burger menu (Pulak, 2017)

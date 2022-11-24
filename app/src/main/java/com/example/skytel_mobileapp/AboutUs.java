@@ -118,8 +118,6 @@ public class AboutUs extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     public void InitVideo(){
