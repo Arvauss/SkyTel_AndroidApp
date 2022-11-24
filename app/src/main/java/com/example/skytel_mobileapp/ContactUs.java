@@ -53,7 +53,7 @@ public class ContactUs extends AppCompatActivity {
         twitter = findViewById(R.id.twitterIB);
         facebook = findViewById(R.id.facebookIB);
         youtube = findViewById(R.id.youtubeIB);
-        whatsapp = findViewById(R.id.whatsappIB);
+      //  whatsapp = findViewById(R.id.whatsappIB);
 
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +94,7 @@ public class ContactUs extends AppCompatActivity {
             }
         });
 
-        whatsapp.setOnClickListener(new View.OnClickListener() {
+        /*whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 uri = Uri.parse("https://api.whatsapp.com/message/JEBWC3A5HCBKA1");
@@ -102,7 +102,7 @@ public class ContactUs extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
         //LINK FOR LEGAL
         ((TextView) findViewById(R.id.legalLink)).setMovementMethod(LinkMovementMethod.getInstance());
