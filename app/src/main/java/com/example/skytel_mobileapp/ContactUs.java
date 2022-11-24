@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -38,11 +40,69 @@ public class ContactUs extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ImageButton instagram, twitter, facebook, youtube, whatsapp;
+    Uri uri;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+
+        instagram = findViewById(R.id.instagramIB);
+        twitter = findViewById(R.id.twitterIB);
+        facebook = findViewById(R.id.facebookIB);
+        youtube = findViewById(R.id.youtubeIB);
+        whatsapp = findViewById(R.id.whatsappIB);
+
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uri = Uri.parse("https://www.instagram.com/mtnza/?hl=en");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+            }
+        });
+
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uri = Uri.parse("https://twitter.com/MTNza");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+            }
+        });
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uri = Uri.parse("https://www.facebook.com/skytelmobile/?_rdc=2&_rdr");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+            }
+        });
+
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uri = Uri.parse("https://www.youtube.com/channel/UCtEQuR-kzCp8Fv6F5DY2wPg");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uri = Uri.parse("https://api.whatsapp.com/message/JEBWC3A5HCBKA1");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+            }
+        });
 
         //LINK FOR LEGAL
         ((TextView) findViewById(R.id.legalLink)).setMovementMethod(LinkMovementMethod.getInstance());
